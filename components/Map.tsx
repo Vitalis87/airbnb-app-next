@@ -13,16 +13,15 @@ const Map: FC<MapProps> = ({ searchResults }) => {
     latitude: result.lat,
   }));
 
-
-  const center = getCenter(coordinates);
+  getCenter(coordinates); //{latitude: 51.50996326851979, longitude: -0.08452479386870405}
   
   return (
     <ReactMapGL
       mapStyle="mapbox://styles/hope87/clamgqpkw000y14rocdkrm1me"
       mapboxAccessToken={process.env.mapbox_key}
       initialViewState={{
-        longitude: center.longitude,
-        latitude: center.latitude,
+        longitude: -0.08452479386870405,
+        latitude: 51.50996326851979,
         zoom: 11,
       }}
       style={{width: '100vw', height: '100vh'}}
