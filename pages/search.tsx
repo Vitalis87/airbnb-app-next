@@ -80,7 +80,7 @@ export default Search;
 
 export const getServerSideProps: GetServerSideProps = async () => {
   const searchResults = await fetch(
-    "http://127.0.0.1:3000/api/searchResults"
+    "http://localhost:3000/api/searchResults"
   ).then((res) => res.json());
 
   return {

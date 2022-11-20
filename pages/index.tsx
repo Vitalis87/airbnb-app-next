@@ -55,10 +55,10 @@ export default Home;
 
 export const getServerSideProps: GetServerSideProps = async () => {
   const exploreData = await fetch(
-    "http://127.0.0.1:3000/api/exploreNearby"
+    "http://localhost:3000/api/exploreNearby"
   ).then((res) => res.json());
 
-  const cardsData = await fetch("http://127.0.0.1:3000/api/liveAnywhere").then(
+  const cardsData = await fetch("http://localhost:3000/api/liveAnywhere").then(
     (res) => res.json()
   );
 
