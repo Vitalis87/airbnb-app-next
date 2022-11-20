@@ -1,5 +1,5 @@
 import Head from "next/head";
-import type { NextPage, GetStaticProps } from "next";
+import type { NextPage, GetServerSideProps } from "next";
 import { Banner, SmallCard, MediumCard, LargeCard } from "../components";
 
 import { ExploreData, CardsData } from "../types";
@@ -53,7 +53,7 @@ const Home: NextPage<HomeProps> = ({ exploreData, cardsData }) => {
 
 export default Home;
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
   const exploreData = await fetch(
     "http://127.0.0.1:3000/api/exploreNearby"
   ).then((res) => res.json());
